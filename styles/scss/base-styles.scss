@@ -192,6 +192,11 @@ header.page-nav {
 					color: $navbar-link-color;
 					padding: 2px 2em;
 					text-decoration: none;
+					@include transition(all 250ms);
+					&:hover {
+						color: white;
+						text-shadow: -1px 1px 5px rgba(255,255,255,0.5), 1px -1px 5px rgba(255,255,255,0.6);
+					}
 					@include media(min-width 361px max-width 560px) {
 						padding: 2px 1em;
 					}

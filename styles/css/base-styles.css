@@ -191,7 +191,13 @@ header.page-nav {
           text-transform: uppercase;
           color: rgba(255, 255, 255, 0.75);
           padding: 2px 2em;
-          text-decoration: none; }
+          text-decoration: none;
+          -webkit-transition: all 250ms;
+          -moz-transition: all 250ms;
+          transition: all 250ms; }
+          header.page-nav > nav > ul > li > a:hover {
+            color: white;
+            text-shadow: -1px 1px 5px rgba(255, 255, 255, 0.5), 1px -1px 5px rgba(255, 255, 255, 0.6); }
           @media screen and (min-width: 361px) and (max-width: 560px) {
             header.page-nav > nav > ul > li > a {
               padding: 2px 1em; } }
