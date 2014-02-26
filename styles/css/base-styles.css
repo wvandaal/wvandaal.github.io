@@ -191,9 +191,13 @@ header.page-nav {
           color: rgba(255, 255, 255, 0.75);
           padding: 2px 2em;
           text-decoration: none; }
-          @media screen and (max-width: 560px) {
+          @media screen and (min-width: 361px) and (max-width: 560px) {
             header.page-nav > nav > ul > li > a {
               padding: 2px 1em; } }
+          @media screen and (max-width: 360px) {
+            header.page-nav > nav > ul > li > a {
+              padding: 2px 0.75em;
+              letter-spacing: 0.2em; } }
 
 section#hero-banner {
   width: 100%;
@@ -377,8 +381,8 @@ section#projects {
           height: 180px; } }
       @media screen and (max-width: 440px) {
         section#projects > div.container > section.project > img.screenshot {
-          width: 330px;
-          height: 160px; } }
+          width: 310px;
+          height: 150px; } }
     @media screen and (max-width: 620px) {
       section#projects > div.container > section.project > div.description {
         float: left;

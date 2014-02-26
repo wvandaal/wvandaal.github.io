@@ -191,8 +191,12 @@ header.page-nav {
 					color: $navbar-link-color;
 					padding: 2px 2em;
 					text-decoration: none;
-					@include media(max-width 560px) {
+					@include media(min-width 361px max-width 560px) {
 						padding: 2px 1em;
+					}
+					@include media(max-width 360px) {
+						padding: 2px 0.75em;
+						letter-spacing: 0.2em;
 					}
 				}
 			}
@@ -367,8 +371,8 @@ section#projects {
 					height: 180px;
 				}
 				@include media(max-width 440px) {
-					width: 330px;
-					height: 160px;
+					width: 310px;
+					height: 150px;
 				}
 			}
 			>div.description {
