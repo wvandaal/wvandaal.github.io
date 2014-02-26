@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Willem van Daalen</title>
+	<link rel="stylesheet" type="text/css" href="styles/css/normalize.css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="styles/css/base-styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/css/fontello.css">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+</head>
+<body>
+
+	<!-- Navbar -->
+	<header class="page-nav">
+		<nav>
+			<ul>
+				<li><a href="#about">About Me</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="resume.html">Resumé</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Hero Banner -->
+	<section id="hero-banner">
+		<div class="profile-pic"><img src="images/profile-pic.jpg" alt="profile-pic"></div>
+		<header>
+			<h1>Willem van Daalen</h1>
+			<span class="byline">Ruby on Rails and JavaScript Web Developer</span>
+		</header>
+	</section>
+
+	<!-- About Me -->
+	<section id="about">
+		<div class="section-tab">About Me</div>
+		<div class="container">
+			<p class="teaser">Allow me to (re)introduce myself...</p>
+			<p class="banner">My name is Willem and I'm a web developer experienced in HTML5, CSS3, JavaScript, Ruby on Rails, and responsive web design.</p>
+			<p class="details">I recently graduated from Trinity College with degrees in Computer Science and Hispanic Studies. I first started designing for the web in the winter of 2013 and I haven't looked back. Of particular interest to me is the rapidly evolving landscape of web design, especially in the areas of <strong>Shadow DOM</strong>, <strong>Web Components</strong>, <strong>Responsive Design</strong>. Feel free to check out <a href="resume.html">my resumé</a> for more details.
+		</div>
+	</section>
+
+	<!-- Projects -->
+	<section id="projects">
+		<div class="section-tab">My Projects</div>
+		<div class="container">
+
+			<header>
+				<h1>Check out some of my latest work</h1>
+				<h2>I learn by doing. Each project below was an attempt to do something new.</h2>
+			</header>
+			<br>
+
+			<!-- PwrSlide Project -->
+			<section class="project">
+				<img src="images/pwrslide-screenshot.png" alt="PwrSlide" class="screenshot">
+				<div class="description">
+					<header>
+						<h1>PwrSlide</h1>
+						<span class="byline">HTML5 Presentation Web Components</span>
+					</header>
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita id perspiciatis at non odit consequatur animi necessitatibus libero? Repudiandae, dolorum iusto optio ratione ipsum fugit deleniti sequi porro obcaecati voluptates! 
+					</p>
+					<nav class="project-links">
+						<a class="demo" href="#"><i class="icon-beaker"></i></a>
+						<a class="github" href="#"><i class="icon-github-circled"></i></a>
+					</nav>
+				</div>
+			</section>
+
+			<!-- Asteroids Project -->
+			<section class="project">
+				<img src="images/pwrslide-screenshot2.png" alt="Asteroids" class="screenshot">
+				<div class="description">
+					<header>
+						<h1>Asteroids</h1>
+						<span class="byline">Pure JS Arcade Fun</span>
+					</header>
+					<p class="details">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita id perspiciatis at non odit consequatur animi necessitatibus libero? Repudiandae, dolorum iusto optio ratione ipsum fugit deleniti sequi porro obcaecati voluptates! 
+					</p>
+					<nav class="project-links">
+						<a class="demo" href="#"><i class="icon-beaker"></i></a>
+						<a class="github" href="#"><i class="icon-github-circled"></i></a>
+					</nav>
+				</div>
+			</section>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$.localScroll({offset: {top: -64}});
+		});
+	</script>
+</body>
+</html>
