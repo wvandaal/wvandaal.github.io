@@ -114,7 +114,8 @@ section {
 
 p.teaser {
   font-size: 1.5em;
-  letter-spacing: 0.15em; }
+  letter-spacing: 0.15em;
+  padding: 0 1em; }
 
 p.banner {
   font-size: 2em;
@@ -311,6 +312,9 @@ section#projects {
       color: #919499;
       font-weight: 400;
       letter-spacing: 0.05em; }
+      @media screen and (max-width: 560px) {
+        section#projects > div.container > header > h2 {
+          font-size: 1.2em; } }
   section#projects > div.container > section.project {
     float: left;
     display: block;

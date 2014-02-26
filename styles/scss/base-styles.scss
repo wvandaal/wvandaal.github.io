@@ -114,6 +114,7 @@ section {
 p.teaser {
 	font-size: 1.5em;
 	letter-spacing: 0.15em;
+	padding: 0 1em;
 }
 
 p.banner {
@@ -316,6 +317,9 @@ section#projects {
 				color: rgb(145, 148, 153);
 				font-weight: 400;
 				letter-spacing: 0.05em;
+				@include media(max-width 560px) {
+					font-size: 1.2em;
+				}
 			}
 		}		
 		>section.project {
