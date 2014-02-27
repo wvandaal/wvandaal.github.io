@@ -1,3 +1,4 @@
-if(!Modernizr.input.placeholder {
-	$.webshims.polyfill('forms');
-}
+$(document).ready(function() {
+	$('input, textarea').placeholder();
+	$.localScroll({offset: {top: -64}});
+});
