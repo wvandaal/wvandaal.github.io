@@ -485,7 +485,7 @@ form#contact-form {
 			background: rgba(255,255,255,0.95);
 			outline: none;
 		}
-		@include box-shadow(none);
+		box-shadow: none;
 		@include placeholder {
 			color: rgba(0,0,0,0.5);
 		}

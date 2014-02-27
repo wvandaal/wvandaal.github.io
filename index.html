@@ -7,13 +7,12 @@
 	
 	<title>Willem van Daalen</title>
 	<meta name="author" content="Willem C. van Daalen">
-	<meta name="description" content="">
+	<meta name="description" content="Willem van Daalen is a Ruby on Rails and JavaScript web developer currently available for hire. Check out his recent projects, view his resume, or contact him directly for more information.">
 
 	<link rel="shortcut icon" href="images/favicon.png">
 	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
 	<link rel="stylesheet" type="text/css" href="styles/css/normalize.css">
-	<link href='http://fonts.googleapis.com/css?family=Concert+One:400,600' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="styles/css/base-styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/css/fontello.css">
@@ -36,7 +35,7 @@
 			<ul>
 				<li><a href="#about">About Me</a></li>
 				<li><a href="#projects">Projects</a></li>
-				<li><a href="resume.html">Resumé</a></li>
+				<li><a href="resume.html" target="_self">Resumé</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
@@ -57,7 +56,7 @@
 		<div class="container">
 			<p class="teaser">Allow me to (re)introduce myself...</p>
 			<p class="banner">My name is Willem and I'm a web developer experienced in HTML5, CSS3, JavaScript, Ruby on Rails, and responsive web design.</p>
-			<p class="details">I recently graduated from Trinity College with degrees in Computer Science and Hispanic Studies. I first started designing for the web in the winter of 2013 and I haven't looked back. Of particular interest to me is the rapidly evolving landscape of web design, especially in the areas of <strong>Shadow DOM</strong>, <strong>Web Components</strong>, and <strong>Responsive Design</strong>. Feel free to check out <a href="resume.html">my resumé</a> for more details.
+			<p class="details">I recently graduated from Trinity College with degrees in Computer Science and Hispanic Studies. I first started designing for the web in the winter of 2013 and I haven't looked back. Of particular interest to me is the rapidly evolving landscape of web design, especially in the areas of <strong>Shadow DOM</strong>, <strong>Web Components</strong>, and <strong>Responsive Design</strong>. Feel free to check out <a href="resume.html" target="_self">my resumé</a> for more details.
 		</div>
 	</section>
 
@@ -67,7 +66,7 @@
 		<div class="container">
 
 			<header>
-				<h1>Check out some of my latest work</h1>
+				<h1>Check out some of my latest work.</h1>
 				<h2>I learn by doing. Each project below was an attempt to do something new.</h2>
 			</header>
 			<br>
@@ -110,16 +109,17 @@
 		</div>
 	</section>
 
+	<!-- Contact Information -->
 	<section id="contact">
 		<div class="section-tab">Contact Me</div>
 		<div class="container">
 			
 			<header>
-				<h1>Want to talk? Get in touch!</h1>
+				<h1>Reach out, get in touch.</h1>
 				<h2>I would love to hear from you.</h2>
 			</header>
 
-			<form method="post" action="" id="contact-form">
+			<form method="post" action="php/mailer.php" id="contact-form">
 				<input type="text" name="name" id="name" placeholder="Name" required>
 				<input type="text" name="email" id="email" placeholder="Email" required>
 				<input type="text" name="subject" id="subject" placeholder="Subject" required>
@@ -137,8 +137,5 @@
 
 		</div>
 	</section>
-
-	<footer></footer>
-
 </body>
 </html>
