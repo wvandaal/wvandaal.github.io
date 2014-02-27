@@ -293,6 +293,31 @@ section#about {
 	a:visited, a:hover {color: black;}
 }
 
+@mixin generic-section-header() {
+	>header {	
+		text-align: center;
+		margin: 3em 0 5em;
+		padding: 0 1em;
+		@include media(max-width 560px) {
+			margin: 2em 0 3em;
+		}
+		>h1 {
+			font-size: 2.5em;
+			letter-spacing: 0.05em;
+			@include media(max-width 560px) {
+				font-size: 2em;
+			}
+		}
+		>h2 {
+			font-weight: 400;
+			letter-spacing: 0.05em;
+			@include media(max-width 560px) {
+				font-size: 1.2em;
+			}
+		}
+	}			
+}
+
 // Projects
 section#projects {
 	@include transition(all 500ms);
@@ -303,29 +328,10 @@ section#projects {
 		padding: 3em 0;
 	}
 	>div.container {
+		@include generic-section-header();
 		>header {	
-			text-align: center;
-			margin: 3em 0 5em;
-			padding: 0 1em;
-			@include media(max-width 560px) {
-				margin: 2em 0 3em;
-			}
-			>h1 {
-				font-size: 2.5em;
-				color: #2f333b;
-				letter-spacing: 0.05em;
-				@include media(max-width 560px) {
-					font-size: 2em;
-				}
-			}
-			>h2 {
-				color: rgb(145, 148, 153);
-				font-weight: 400;
-				letter-spacing: 0.05em;
-				@include media(max-width 560px) {
-					font-size: 1.2em;
-				}
-			}
+			>h1 { color: #2f333b; }
+			>h2 { color: rgb(145, 148, 153); }
 		}		
 		>section.project {
 			@include span-columns(6);
@@ -343,12 +349,14 @@ section#projects {
 			@include media(max-width 620px, 12) {
 				@include span-columns(12);
 			}
+			nav.project-links {
+				padding-bottom: 2em;
+				margin-bottom: 1em;
+			}
 			&:not(:last-child) {
 				nav.project-links {
 					border-bottom: 1px solid rgba(0,0,0,0.1);
 					box-shadow: 0px 1px 1px #f5f5f5;
-					padding-bottom: 2em;
-					margin-bottom: 1em;
 				}
 			}
 			@include media(min-width 1101px) {
@@ -356,8 +364,6 @@ section#projects {
 					nav.project-links {
 						border-bottom: none;
 						box-shadow: none;
-						padding-bottom: 2em;
-						margin-bottom: 1em;
 					}
 				}
 			}
@@ -415,5 +421,79 @@ section#projects {
 				}
 			}
 		}
+	}
+}
+
+
+// Contact
+section#contact {
+	@include transition(all 500ms);
+	background: #2f333b url('../../images/overlay.png') center center;
+	color: rgba(255,255,255,0.5);
+	padding: 5em 0;
+	@include media(max-width 560px) {
+		padding: 3em 0;
+	}
+	>div.section-tab {
+		color: white;
+	}
+	>div.container {
+		@include generic-section-header();
+		>header {
+			>h1 { color: white; }
+		}
+		>hr {
+			margin: 4em 0;
+			border: 0;
+			border-top: solid 1px rgba(255,255,255,0.05);
+			@include media(max-width 1000px) {
+				margin: 2em 5%;
+			}
+		}
+	}
+}
+
+form#contact-form {
+	font-size: 0.9em;
+	display: block;
+	@include outer-container();
+	>input, >textarea {
+		background: #ccc;
+		-webkit-appearance: none;
+		display: block;
+		border-radius: 0.35em;
+		margin: 1em 0;
+		padding: 0.75em 1em 0.75em 1em;
+		border: none;
+		&:focus {
+			background: rgba(255,255,255,0.8);
+		}
+		@include box-shadow(none);
+		@include placeholder {
+			color: rgba(0,0,0,0.5);
+		}
+	}
+	>input#name {
+		@include span-columns(5);
+		@include shift(1);
+		@include media(max-width 680px) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+	}
+	>input#email {
+		@include span-columns(5);
+		@include omega();
+		@include media(max-width 680px) {
+			@include span-columns(10);
+			@include shift(1);
+		}
+	}
+	>input#subject, textarea#message {
+		@include span-columns(10);
+		@include shift(1);
+	}
+	>textarea#message {
+		display: block;
 	}
 }

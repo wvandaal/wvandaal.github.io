@@ -309,18 +309,20 @@ section#projects {
         margin: 2em 0 3em; } }
     section#projects > div.container > header > h1 {
       font-size: 2.5em;
-      color: #2f333b;
       letter-spacing: 0.05em; }
       @media screen and (max-width: 560px) {
         section#projects > div.container > header > h1 {
           font-size: 2em; } }
     section#projects > div.container > header > h2 {
-      color: #919499;
       font-weight: 400;
       letter-spacing: 0.05em; }
       @media screen and (max-width: 560px) {
         section#projects > div.container > header > h2 {
           font-size: 1.2em; } }
+  section#projects > div.container > header > h1 {
+    color: #2f333b; }
+  section#projects > div.container > header > h2 {
+    color: #919499; }
   section#projects > div.container > section.project {
     float: left;
     display: block;
@@ -360,17 +362,16 @@ section#projects {
         width: 100%; }
         section#projects > div.container > section.project:last-child {
           margin-right: 0; } }
-    section#projects > div.container > section.project:not(:last-child) nav.project-links {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-      box-shadow: 0px 1px 1px #f5f5f5;
+    section#projects > div.container > section.project nav.project-links {
       padding-bottom: 2em;
       margin-bottom: 1em; }
+    section#projects > div.container > section.project:not(:last-child) nav.project-links {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 1px 1px #f5f5f5; }
     @media screen and (min-width: 1101px) {
       section#projects > div.container > section.project:nth-last-child(2) nav.project-links {
         border-bottom: none;
-        box-shadow: none;
-        padding-bottom: 2em;
-        margin-bottom: 1em; } }
+        box-shadow: none; } }
     section#projects > div.container > section.project > img.screenshot {
       max-width: 530px;
       height: 260px;
@@ -420,3 +421,120 @@ section#projects {
       transition: all 500ms; }
       section#projects > div.container > section.project > div.description > nav.project-links > a:hover {
         color: rgba(0, 0, 0, 0.4); }
+
+section#contact {
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
+  background: #2f333b url("../../images/overlay.png") center center;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 5em 0; }
+  @media screen and (max-width: 560px) {
+    section#contact {
+      padding: 3em 0; } }
+  section#contact > div.section-tab {
+    color: white; }
+  section#contact > div.container > header {
+    text-align: center;
+    margin: 3em 0 5em;
+    padding: 0 1em; }
+    @media screen and (max-width: 560px) {
+      section#contact > div.container > header {
+        margin: 2em 0 3em; } }
+    section#contact > div.container > header > h1 {
+      font-size: 2.5em;
+      letter-spacing: 0.05em; }
+      @media screen and (max-width: 560px) {
+        section#contact > div.container > header > h1 {
+          font-size: 2em; } }
+    section#contact > div.container > header > h2 {
+      font-weight: 400;
+      letter-spacing: 0.05em; }
+      @media screen and (max-width: 560px) {
+        section#contact > div.container > header > h2 {
+          font-size: 1.2em; } }
+  section#contact > div.container > header > h1 {
+    color: white; }
+  section#contact > div.container > hr {
+    margin: 4em 0;
+    border: 0;
+    border-top: solid 1px rgba(255, 255, 255, 0.05); }
+    @media screen and (max-width: 1000px) {
+      section#contact > div.container > hr {
+        margin: 2em 5%; } }
+
+form#contact-form {
+  font-size: 0.9em;
+  display: block;
+  *zoom: 1;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  form#contact-form:before, form#contact-form:after {
+    content: " ";
+    display: table; }
+  form#contact-form:after {
+    clear: both; }
+  form#contact-form > input, form#contact-form > textarea {
+    background: #ccc;
+    -webkit-appearance: none;
+    display: block;
+    border-radius: 0.35em;
+    margin: 1em 0;
+    padding: 0.75em 1em 0.75em 1em;
+    border: none;
+    box-shadow: none; }
+    form#contact-form > input:focus, form#contact-form > textarea:focus {
+      background: rgba(255, 255, 255, 0.8); }
+    form#contact-form > input::-webkit-input-placeholder, form#contact-form > textarea::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.5); }
+    form#contact-form > input:-moz-placeholder, form#contact-form > textarea:-moz-placeholder {
+      color: rgba(0, 0, 0, 0.5); }
+    form#contact-form > input::-moz-placeholder, form#contact-form > textarea::-moz-placeholder {
+      color: rgba(0, 0, 0, 0.5); }
+    form#contact-form > input:-ms-input-placeholder, form#contact-form > textarea:-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.5); }
+  form#contact-form > input#name {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    margin-left: 8.5298%; }
+    form#contact-form > input#name:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 680px) {
+      form#contact-form > input#name {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        margin-left: 8.5298%; }
+        form#contact-form > input#name:last-child {
+          margin-right: 0; } }
+  form#contact-form > input#email {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    margin-right: 0; }
+    form#contact-form > input#email:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 680px) {
+      form#contact-form > input#email {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 82.94039%;
+        margin-left: 8.5298%; }
+        form#contact-form > input#email:last-child {
+          margin-right: 0; } }
+  form#contact-form > input#subject, form#contact-form textarea#message {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%; }
+    form#contact-form > input#subject:last-child, form#contact-form textarea#message:last-child {
+      margin-right: 0; }
+  form#contact-form > textarea#message {
+    display: block; }
