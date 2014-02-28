@@ -440,6 +440,7 @@ section#contact {
 	>div.container {
 		@include generic-section-header();
 		>header {
+			margin-top: 0;
 			>h1 { color: white; }
 		}
 		>nav.contact {
