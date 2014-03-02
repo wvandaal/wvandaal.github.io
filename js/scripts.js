@@ -1,20 +1,7 @@
-// $(document).ready(function() {
-// 	$('input, textarea').placeholder();
-// 	$.localScroll({offset: {top: -64}});
-// });
-
-jQuery(function($) {
-
-	$.localScroll({
-		onBefore: function() {
-			console.log('hi');
-		},
-		onAfter: function() {
-			console.log('bye');
-		}
-	});
-
-})
+$(document).ready(function() {
+	$('input, textarea').placeholder();
+	$.localScroll({offset: {top: -64}});
+});
 
 $('#contact-form').submit(function() {
 	$.ajax({
