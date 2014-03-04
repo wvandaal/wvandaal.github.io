@@ -6,7 +6,7 @@ $(document).ready(function() {
 $('#contact-form').submit(function() {
 	$.ajax({
 		dataType: 'jsonp',
-		url: 'http://getsimpleform.com/messages/ajax?form_api_token=5268bb70acccc8d2d61fda8949e6d556',
+		url: 'http://getsimpleform.com/messages/ajax?form_api_token=44099459d7deecbb074c44242299972e',
 		data: $('#contact-form').serialize()
 	}).done(function() {
 		// Reset the form
