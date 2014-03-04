@@ -367,10 +367,13 @@ section#projects {
 					}
 				}
 			}
-			>img.screenshot {
+			>figure.screenshot {
 				max-width: 530px;
 				height: 260px;
-				border: 10px solid white;
+				border: 0.75em solid white;
+				overflow: hidden;
+				position: relative;
+				margin: 0 auto;
 				@include media(min-width 951px max-width 1100px) {
 					width: 480px;
 					height: 235px;
@@ -388,6 +391,19 @@ section#projects {
 				@include media(max-width 440px) {
 					width: 310px;
 					height: 150px;
+				}
+				>img {
+					width: 100%;
+				}
+				>figcaption {
+					font-size: 0.9em;
+					position: absolute;
+					width: 100%;
+					bottom: 0;
+					background: rgba(0,0,0,0.7);
+					color: white;
+					font-weight: 700;
+					padding: 0.25em;
 				}
 			}
 			>div.description {
