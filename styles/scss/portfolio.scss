@@ -473,6 +473,7 @@ section#contact {
 form#contact-form {
 	font-size: 0.9em;
 	display: block;
+	position: relative;
 	@include outer-container();
 	>div#submit-msg {
 		opacity: 0;
@@ -480,6 +481,12 @@ form#contact-form {
 		text-align: center;
 		position: relative;
 		top: -1.2em;
+		>ul.errors {
+			color: #E97770;
+			> li {
+				list-style: none;
+			}
+		}
 	}
 	>input, >textarea {
 		background: #ccc;
