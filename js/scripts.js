@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	$('input, textarea').placeholder();
 	$.localScroll({offset: {top: -64}});
-	// $('#contact-form').h5Validate();
 });
 
 $('#contact-form').submit(function() {
