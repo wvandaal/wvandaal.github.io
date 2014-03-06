@@ -116,6 +116,7 @@ p.teaser {
 	font-size: 1.5em;
 	letter-spacing: 0.15em;
 	padding: 0 1em;
+	font-weight: 600;
 }
 
 p.banner {
@@ -309,13 +310,93 @@ section#about {
 			}
 		}
 		>h2 {
-			font-weight: 400;
+			font-weight: 600;
 			letter-spacing: 0.05em;
 			@include media(max-width 560px) {
 				font-size: 1.2em;
 			}
 		}
 	}			
+}
+
+
+// Technical Skills
+section#skills {
+	background-color: white;
+	padding: 4em 0 6em;
+	div.container {
+		@include generic-section-header();
+		>header {
+			margin: 0 auto;
+			>h1 { color: #484d55; }
+			>h2 { color: #b1b4b9; }
+		}
+		div#skills-icons { 
+			@include span-columns(12);
+		  margin: 1em auto;
+		  text-align: center;
+		  font-size: 1.25em;
+		  @include media(max-width 720px) {
+		  	font-size: 1em;
+		  }
+		  > figure {
+		    position: relative;
+		    display: inline-block;
+		    text-align: center;
+		    width: 9em;
+		    margin: 1em auto;
+		    @include transition(all 500ms);
+		    &:hover {
+		      @include transform(scale(1.1));
+		      > img, > span {
+		        border-color: rgba(0,0,0,0.8);
+		        background-color: transparent;
+		      }
+		    }
+		    > img, > span {
+		      background-color: rgba(0,0,0,0.05);
+		      border: 2px solid rgba(0,0,0,0);
+		      margin: 0.5em auto;
+		      border-radius: 3em;
+		      @include transition(all 500ms);
+		    }
+		    > span {
+		      font-size: 1.9em;
+		      padding: 0.625em;
+
+		      // Workaround to allow fontello and pictonic to play together nicely
+		      &:before {
+		        font-family: "pictonic";
+		        margin: 0;
+		      }
+		      &.icon-prog-jquery {
+		        color: #3E83BB;
+		      }
+		      &.icon-prog-rails {
+		        color: rgb(227,64,54);
+		      }
+		      &.icon-dbs-postgresql {
+		        color: #008A7E;
+		      }
+		    }
+		    > img {
+		      width: 4.5em;
+		      height: 4.5em;
+		      padding: 1em;
+		    }
+		    > figcaption {
+		      font-family: 'Varela Round', sans-serif;
+		      text-align: center;
+		      width: 100%;
+		      bottom: 0;
+		      font-size: 14px;
+		      @include media(max-width 560px) {
+		        font-size: 12px;
+		      }
+		    }
+		  }
+		}
+	}
 }
 
 // Projects
@@ -478,6 +559,8 @@ section#contact {
 					@include transform(scale(1.2));
 				}
 				>i {
+					font-family: "fontello";
+					line-height: 1.45em;		// Workaround to make pictonic play nicely with fontello
 					display: inline-block;
 					padding: 0.75em;
 				}

@@ -1,60 +1,136 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<!-- Config Settings -->
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Config Settings -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base target="_blank">
 
-	<!-- Site Metadata -->
-	<title>Willem C. van Daalen's Resumé</title>
-	<meta name="author" content="Willem C. van Daalen">
-	<meta name="description" content="Curriculum Vitae of Willem C. van Daalen">
-	<meta name="keywords" content="ruby on rail developer, ror developer, javascript developer, js developer, web developer, ror contract, hire web developer, ruby on rails consulting, backbone developer, responsive web designer, willem van daalen, willem c van daalen, willemvandaalen, wcvandal, wvandaal, wvandaalen, willem.vandaalen, hire rails developer, hire javascript developer, front end design, front end developer">
+  <!-- Site Metadata -->
+  <title>Résumé</title>
+  <meta name="author" content="Willem C. van Daalen">
+  <meta name="description" content="Curriculum Vitae of Willem C. van Daalen">
 
-	<!-- Icons -->
-	<link rel="shortcut icon" href="images/favicon.png">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <!-- Icons -->
+  <link rel="shortcut icon" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-	<!-- Styles -->
-	<link rel="stylesheet" type="text/css" href="styles/css/normalize.css">
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="styles/css/resume.css">
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="styles/css/normalize.css">
+  <link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="styles/css/pictonic.css">
+  <link rel="stylesheet" type="text/css" href="styles/css/fontello.css">
+  <link rel="stylesheet" type="text/css" href="styles/css/resume.css">
 </head>
 <body>
-	<header id="title">
-		<h1>Willem C. van Daalen</h1>
-		<h2>Ruby on Rails and JavaScript Web Developer</h2>
-	</header>
 
-	<section id="summary">
-		<header>Summary</header>
-		<p>I am a full-stack web designer with degrees in Computer Science and Hispanic Studies from Trinity College. My areas of expertise are in Ruby on Rails, JavaScript, HTML5 and CSS3, and responsive web design. More recently, I have become very interested in the emerging Web Components specs and development in Node and Backbone.js. Perhaps most importantly, I am passionate about performance - both in my websites and in myself.</p>
-	</section>
+  <!-- Buttons Nav -->
+  <nav id="buttons">
+    <ul>
+      <li><i class="icon-print" onclick="window.print();"></i></li>
+      <li><a href="resume.pdf"><i class="icon-down-circled"></i></a></li>
+    </ul>
+  </nav>
 
-	<section id="projects">
-		<header>Recent Projects</header>
+  <!-- Name and Contact Info -->
+  <header id="title">
+    <h1>W<small>illem</small> C. <small>van</small> D<small>aalen</small></h1>
+    <h2></h2>
+    <ul id="contact">      
+      <li><a href="mailto:willem@wcvd.me">willem@wcvd.me</a></li>
+      <li><a href="http://wcvd.me">wcvd.me</a></li>
+      <li><a href="http://github.com/wvandaal">github.com/wvandaal</a></li>
+      <li>203.545.0807</li>
+      <li>New York, NY</li>
+    </ul>
+  </header>
 
-		section.project>(header>h1.title+a.demo+a.github)+p.description
+  <!-- Summary Section -->
+  <section id="summary">
+    <header>S<small>ummary</small></header>
+    <p>I am a full-stack web designer with degrees in Computer Science and Hispanic Studies from Trinity College. My areas of expertise are in Ruby on Rails, JavaScript, HTML5 and CSS3, and responsive web design. More recently, I have become very interested in the emerging Web Components specs and development in Node and Backbone.js. Perhaps most importantly, I am passionate about performance - both in my websites and in myself.</p>
+  </section>
 
-	</section>
-	
-	<section id="work">
-		<header>Experience</header>
-		
-		section.position>(header>h1.title+)
+  <section id="projects">
+    <header>P<small>rojects</small></header>
 
-	</section>
+    <!-- PwrSlide -->
+    <section class="project">
+      <header>
+        PwrSlide<span class="proj-date">February 2014</span>
+      </header>
+      <a href="http://wcvd.me/PwrSlide" class="demo" data-link="wcvd.me/PwrSlide">Demo</a>
+      <a href="http://github.com/wvandaal/PwrSlide" class="github" data-link="github.com/wcvandaal/PwrSlide">Source</a>
+      <p class="description">
+        Open source presentation framework built using web components spec and Polymer.js. Includes responsive theme written in Sass and implemented using the 2012 flexbox spec. Registered with bower and on <a href="http://customelements.io">customelements.io</a>. 
+      </p>
+    </section>
 
-	<section id="education">
-		<header>Education</header>
+    <section class="project">
+      <header>
+        PwrSlide<span class="proj-date">February 2014</span>
+      </header>
+      <a href="http://wcvd.me/PwrSlide" class="demo" data-link="wcvd.me/PwrSlide">Demo</a>
+      <a href="http://github.com/wvandaal/PwrSlide" class="github" data-link="github.com/wcvandaal/PwrSlide">Source</a>
+      <p class="description">
+        Presentation framework built using web components spec and Polymer.js. Includes responsive theme implemented with 2012 flexbox spec. Registered with bower and on customelements.io. 
+      </p>
+    </section>
 
+    <section class="project">
+      <header>
+        Muse.cd<span class="proj-date">April 2013</span>
+      </header>
+      <a href="#" class="demo" data-link="#">Demo</a>
+      <a href="http://github.com/wvandaal/muse" class="github" data-link="github.com/wcvandaal/muse">Source</a>
+      <p class="description">
+        Music discovery web application using Nokogiri and Feedzirra for HTML and RSS/Atom feed parsing to discover newly posted songs on music blogs. Uses Facebook login with Devise and Omniauth, AJAX endless pagination, provides intelligent recommendations using Jaccardian-similarity implemented with Sidekiq and Redis. Winner 2013 Travelers Companies Foundation Senior Research Prize.
+      </p>
+    </section>
 
-	</section>
+  </section>
+  
+  <section id="work">
+    <header>E<small>xperience</small></header>
+    
+    <!-- section.position>(header>h1.title+) -->
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, distinctio, enim nam quae ullam unde sequi iste cupiditate amet voluptatem dolores placeat tenetur ex. Hic consequatur facere aperiam asperiores architecto.</span><span>Delectus, unde, dicta, pariatur deserunt molestiae harum optio assumenda labore tempora fugiat sapiente officiis vitae recusandae voluptates beatae corporis enim magni earum dolores eligendi voluptatibus nisi totam officia quia distinctio!</span></p>
 
-	<section id="skills">
-		<header>Technical Skills</header>
+  </section>
 
-	</section>
+  <section id="education">
+    <header>E<small>ducation</small></header>
+    <section class="degree" id="trinity">
+      <header>
+        Trinity College, <small>Class of 2014</small>
+        <span>Hartford, CT</span>
+      </header>
+      <p>
+        B.S. Computer Science and Hispanic Studies. 2013 Computer Science Presidential Fellow. Winner of 2013 Travelers Companies Foundation Senior Research Prize for “Muse.cd.” Advanced coursework in Networks, Databases, Foundations of Programming Languages, and Web Design. Hispanic Studies senior thesis: <a id="thesis" href="thesis.pdf" data-link="wcvd.me/thesis.pdf">"Ojos de España, bocas de México: construyendo una cultura en exilio"</a>.
+      </p>
+    </section>
+    <section class="degree" id="app-academy">
+      <header>
+        App Academy, <small>Summer 2014</small>
+        <span>New York, NY</span>
+      </header>
+      <p>
+        An intensive twelve-week full-stack web development program. Topics covered include Ruby on Rails, test-driven development with RSpec, HTTP, SQL, HTML5/CSS3, Javascript/Coffeescript, jQuery, AJAX, Backbone.js, unobtrusive design, and object-oriented design.
+      </p>
+    </section>
+  </section>
+
+  <section id="skills">
+    <header>T<small>echnical</small> S<small>kills</small></header>
+    <ul id="skills-list">
+      <li>Ruby, Ruby on Rails, RSpec TDD</li>
+      <li>JavaScript, jQuery, Polymer.js, Backbone.js</li>
+      <li>HTML/5, CSS/3, Sass, Responsive Design, Web Components</li>
+      <li>SQL [MySQL, SQLite, PostgreSQL]</li>
+      <li>VCS: Git, GitHub</li>
+    </ul>
+  </section>
 </body>
 </html>
