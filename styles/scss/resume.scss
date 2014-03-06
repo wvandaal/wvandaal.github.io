@@ -147,7 +147,8 @@ body {
   padding: 0 1em;
   > li {
     float: left;
-    width: 50%;
+    width: 45%;
+    margin-right: 5%;
   }
 }
 
@@ -170,9 +171,7 @@ body {
   }
   body {
     margin: 0;
-    @media print {
-      @include fill-parent();
-    }
+    @include fill-parent();
     > section {
       > header {
         margin: 0;
@@ -199,8 +198,11 @@ body {
     }
   }
 
-  #thesis:after {
-    content: " ( " attr(data-link) " )";
+  #thesis {
+    text-decoration: none;
+    &:after {
+      content: " ( " attr(data-link) " )";
+    }
   }
 }
 
