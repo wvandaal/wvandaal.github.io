@@ -8,7 +8,7 @@
   <base target="_blank">
 
   <!-- Site Metadata -->
-  <title>Resumé</title>
+  <title>Résumé</title>
   <meta name="author" content="Willem C. van Daalen">
   <meta name="description" content="Curriculum Vitae of Willem C. van Daalen">
 
@@ -26,7 +26,7 @@
 </head>
 <body>
 
-  <!-- Buttons Nav -->
+  <!-- Print/Download Buttons -->
   <nav id="buttons">
     <ul>
       <li><i class="icon-print" onclick="window.print();"></i></li>
@@ -37,7 +37,6 @@
   <!-- Name and Contact Info -->
   <header id="title">
     <h1>W<small>illem</small> C. <small>van</small> D<small>aalen</small></h1>
-    <h2></h2>
     <ul id="contact">      
       <li><a href="mailto:willem@wcvd.me">willem@wcvd.me</a></li>
       <li><a href="http://wcvd.me">wcvd.me</a></li>
@@ -47,19 +46,15 @@
     </ul>
   </header>
 
-  <!-- Summary Section -->
-  <section id="summary">
-    <header>S<small>ummary</small></header>
-    <p>I am a full-stack web designer with degrees in Computer Science and Hispanic Studies from Trinity College. My areas of expertise are in Ruby on Rails, JavaScript, HTML5 and CSS3, and responsive web design. More recently, I have become very interested in the emerging Web Components specs and development in Node and Backbone.js. Perhaps most importantly, I am passionate about performance - both in my websites and in myself.</p>
-  </section>
-
+  <!-- Projects -->
   <section id="projects">
     <header>P<small>rojects</small></header>
 
     <!-- PwrSlide -->
     <section class="project">
       <header>
-        PwrSlide<span class="proj-date">February 2014</span>
+        <strong>P<small>wr</small>S<small>lide</small></strong>
+        <span class="proj-date">February 2014</span>
       </header>
       <a href="http://wcvd.me/PwrSlide" class="demo" data-link="wcvd.me/PwrSlide">Demo</a>
       <a href="http://github.com/wvandaal/PwrSlide" class="github" data-link="github.com/wcvandaal/PwrSlide">Source</a>
@@ -68,43 +63,36 @@
       </p>
     </section>
 
+    <!-- Muse.cd -->
     <section class="project">
       <header>
-        PwrSlide<span class="proj-date">February 2014</span>
-      </header>
-      <a href="http://wcvd.me/PwrSlide" class="demo" data-link="wcvd.me/PwrSlide">Demo</a>
-      <a href="http://github.com/wvandaal/PwrSlide" class="github" data-link="github.com/wcvandaal/PwrSlide">Source</a>
-      <p class="description">
-        Presentation framework built using web components spec and Polymer.js. Includes responsive theme implemented with 2012 flexbox spec. Registered with bower and on customelements.io. 
-      </p>
-    </section>
-
-    <section class="project">
-      <header>
-        Muse.cd<span class="proj-date">April 2013</span>
+        <strong>M<small>use.cd</small></strong>
+        <span class="proj-date">April 2013</span>
       </header>
       <a href="#" class="demo" data-link="#">Demo</a>
       <a href="http://github.com/wvandaal/muse" class="github" data-link="github.com/wcvandaal/muse">Source</a>
       <p class="description">
-        Music discovery web application using Nokogiri and Feedzirra for HTML and RSS/Atom feed parsing to discover newly posted songs on music blogs. Uses Facebook login with Devise and Omniauth, AJAX endless pagination, provides intelligent recommendations using Jaccardian-similarity implemented with Sidekiq and Redis. Winner 2013 Travelers Companies Foundation Senior Research Prize.
+        Music discovery web application using Nokogiri and Feedzirra for HTML and RSS/Atom feed parsing to discover newly posted songs on music blogs. Features Facebook login with Devise and Omniauth, AJAX endless pagination, Jaccardian-similarity based recommendations implemented with Sidekiq and Redis.
       </p>
     </section>
 
   </section>
   
+  <!-- Work Experience -->
   <section id="work">
     <header>E<small>xperience</small></header>
     
-    <!-- section.position>(header>h1.title+) -->
-    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, distinctio, enim nam quae ullam unde sequi iste cupiditate amet voluptatem dolores placeat tenetur ex. Hic consequatur facere aperiam asperiores architecto.</span><span>Delectus, unde, dicta, pariatur deserunt molestiae harum optio assumenda labore tempora fugiat sapiente officiis vitae recusandae voluptates beatae corporis enim magni earum dolores eligendi voluptatibus nisi totam officia quia distinctio!</span></p>
 
   </section>
 
+  <!-- Education -->
   <section id="education">
     <header>E<small>ducation</small></header>
+
+    <!-- Trinity -->
     <section class="degree" id="trinity">
       <header>
-        Trinity College, <small>Class of 2014</small>
+        <strong>T<small>rinity</small> C<small>ollege</small>,</strong> <small>Class of 2014</small>
         <span>Hartford, CT</span>
       </header>
       <p>
@@ -113,11 +101,11 @@
     </section>
     <section class="degree" id="app-academy">
       <header>
-        App Academy, <small>Summer 2014</small>
+        <strong>A<small>pp</small> A<small>cademy</small></strong>, <small>Summer 2013</small>
         <span>New York, NY</span>
       </header>
       <p>
-        An intensive twelve-week full-stack web development program. Topics covered include Ruby on Rails, test-driven development with RSpec, HTTP, SQL, HTML5/CSS3, Javascript/Coffeescript, jQuery, AJAX, Backbone.js, unobtrusive design, and object-oriented design.
+        An intensive twelve-week full-stack web development program. Topics covered include Ruby on Rails, test-driven development with RSpec, HTTP, SQL, HTML5/CSS3, JavaScript, jQuery, AJAX, Backbone.js, unobtrusive design, and object-oriented design.
       </p>
     </section>
   </section>

@@ -43,7 +43,21 @@ var formVal = (function ($) {
 // AJAX #contact-form submit
 $('#contact-form').submit(function() {
 
-	var errors = formVal.validate($('#contact-form'));
+	var errors 	= formVal.validate($('#contact-form')),
+			$msg 		= $('#submit-msg'),
+			inOut		= function($el) {
+				$el.animate({ opacity: 1 }, 750, 
+				function() {
+					window.setTimeout(function() {
+						$el.animate({ opacity: 0 }, 500);
+					}, 5000);
+				});
+			},
+			finish	= function() {
+				$.scrollTo($msg, 500,{offset: {top:-60}});
+				$msg.html("Thanks for your message, I look forward to speaking with you!");
+				inOut($msg);
+			};
 
 	if (errors.length) {
 		var errorMsgs = $('<ul class="errors">');
@@ -52,20 +66,15 @@ $('#contact-form').submit(function() {
 			errorMsgs.append('<li>' + e + '</li>');
 		})
 
-		$('#submit-msg').html(errorMsgs);
+		// Populate error msgs
+		$msg.html(errorMsgs);
 
 		// Scroll to failure msg
-		$.scrollTo($('#submit-msg'), 500,{offset: {top:-60}});
+		$.scrollTo($msg, 500,{offset: {top:-60}});
 
 		// Animate failure msg in, then out
-		$('#submit-msg').animate({ opacity: 1 }, 750, 
-			function() {
-				window.setTimeout(function() {
-					$('#submit-msg').animate({ opacity: 0 }, 500, function() {$('#submit-msg').html('');});
-				}, 5000);
-			});
+		inOut($msg);
 	} else {
-		$('submit-msg').html("Thanks for your message, I look forward to speaking with you!")
 
 		// Submit form via ajax
 		$.ajax({
@@ -75,17 +84,19 @@ $('#contact-form').submit(function() {
 		}).done(function() {
 			// Reset the form
 			$('#contact-form')[0].reset.click();
+			
 
-			// Scroll to success msg
-			$.scrollTo($('#submit-msg'), 500,{offset: {top:-60}});
-
-			// Animate success msg in, then out
-			$('#submit-msg').animate({ opacity: 1 }, 750, 
-				function() {
-					window.setTimeout(function() {
-						$('#submit-msg').animate({ opacity: 0 }, 500);
-					}, 3500);
+			if ($msg.css('opacity') == 1) {
+				$msg.animate({opacity: 0}, 500, function () {
+					finish();
 				});
+			} else if ($msg.is(':animated')) {
+				$msg.promise().done(function() {
+					finish();
+				});
+			} else {
+				finish();
+			}
 		});
 	}
 	return false;		// Prevent normal form submission

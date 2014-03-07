@@ -1,6 +1,14 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+
+$font: 'Libre Baskerville', serif;
+// $font: 'Varela Round', sans-serif;
+$screen-line-height: 2em;
+$print-line-height: 1.5em;
+
+
+
 html {
   font-size: 16px;
   @include outer-container();
@@ -17,7 +25,7 @@ html {
 }
 
 * {
-	font-family: 'Varela Round', sans-serif;
+	font-family: $font;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -28,16 +36,36 @@ body {
   @media screen {
     @include span-columns(10);
     @include shift(1);
+    margin-bottom: 4em;
   }
+
+  // Major Sections
   > section {
+    margin-bottom: 2em;
   	> header {
       padding: 0.25em 0;
       font-size: 1.1em;  
       text-align: center;
       text-transform: uppercase;
   	}
+
+    // Subsections
+    > section {
+      @media screen {
+        margin-bottom: 2.5em;
+      }
+      > header {
+        margin-bottom: 0.5em;
+        > span {
+          text-transform: uppercase;
+          float: right;
+          font-size: 0.8em;
+        }
+        small { text-transform: uppercase; }
+      }
+    }
     p {
-      line-height: 1.5em;
+      line-height: $screen-line-height;
     }
   }
 }
@@ -52,6 +80,7 @@ body {
     float: right;
     margin: 0;
     padding: 1em;
+    line-height: 1em;
     > li {
       float: left;
       > a, >i {
@@ -63,9 +92,6 @@ body {
           color: rgb(100,100,100);
         }
       }
-      >i {
-        line-height: inherit;
-      }
     }
   }
 }
@@ -74,6 +100,9 @@ body {
 #title {
   text-align: center;
   margin: 4em 0;
+  @include media(max-width 860px) {
+    margin-bottom: 5em;
+  }
   > h1 {
     text-transform: uppercase;
     border-bottom: 1px solid black;
@@ -82,9 +111,6 @@ body {
   >#contact {
     list-style: none;
     padding: 0;
-    @include media(max-width 560px) {
-      margin-bottom: 1em;
-    }
     > li {
       margin-bottom: 0.5em;
       font-size: 0.8em;
@@ -106,16 +132,11 @@ body {
 
 #projects {
   section.project {
-    > header {
-      margin-bottom: 0.5em;
-      > span.proj-date {
-        float: right;
-        font-size: 0.8em;
-      }
-    }
     > a {
       color: black;
       padding-right: 0.5em;
+      font-weight: 700;
+      font-size: 0.8em;
       &.demo {
         border-right: 1px solid black;
       }
@@ -129,14 +150,14 @@ body {
   }
 }
 
+
+#work {
+  display: none;
+}
+
 // Education Section
 #education {
-  > section.degree {
-    > header {
-      >span {
-        float: right;
-      }
-    }
+  > section {
     p {
       margin-top: 0.2em;
     }
@@ -145,14 +166,16 @@ body {
 
 #skills-list {
   padding: 0 1em;
+  line-height: $screen-line-height;
   > li {
     float: left;
     width: 45%;
     margin-right: 5%;
+
   }
 }
 
-
+// Thesis link
 #thesis {
   @media screen {
     text-decoration: underline;
@@ -167,7 +190,6 @@ body {
   }
   html {
     font-size: 12px;
-    line-height: 1em;
   }
   body {
     margin: 0;
@@ -175,6 +197,9 @@ body {
     > section {
       > header {
         margin: 0;
+      }
+      p {
+        line-height: $print-line-height;
       }
     }
   }
@@ -193,6 +218,8 @@ body {
       > a {
         &:after {
           content: " : "attr(data-link);  
+          font-weight: 400;
+          font-variant: italic;
         }
       }
     }
@@ -201,8 +228,12 @@ body {
   #thesis {
     text-decoration: none;
     &:after {
-      content: " ( " attr(data-link) " )";
+      content: " (" attr(data-link) ")";
     }
+  }
+
+  #skills-list {
+    line-height: 1.5em;
   }
 }
 
