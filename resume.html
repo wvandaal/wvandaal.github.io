@@ -8,7 +8,7 @@
   <base target="_blank">
 
   <!-- Site Metadata -->
-  <title>Résumé</title>
+  <title>Willem C. van Daalen Résumé</title>
   <meta name="author" content="Willem C. van Daalen">
   <meta name="description" content="Curriculum Vitae of Willem C. van Daalen">
 
@@ -63,13 +63,39 @@
       </p>
     </section>
 
+    <!-- ResuMe -->
+    <section class="project">
+      <header>
+        <strong>R<small>esu</small>M<small>e</small></strong>
+        <span class="proj-date">August 2013</span>
+      </header>
+      <!-- <a href="#" class="demo" data-link="#">Demo</a> -->
+      <a href="http://github.com/wvandaal/ResuMe" class="github" data-link="github.com/wcvandaal/ResuMe">Source</a>
+      <p class="description">
+        Customizable online resume for small groups of people (C-suite, startup founders, etc.) built with Rails. Implements AJAX for all content creation and editing with fully unobtrusive JavaScript. Page-specific JS uses Garber-Irish implementation to allow for graceful degradation of JS. 
+      </p>
+    </section>
+
+    <!-- Asteroids -->
+    <section class="project">
+      <header>
+        <strong>A<small>steroids</small></strong>
+        <span class="proj-date">July 2013</span>
+      </header>
+      <a href="http://wcvd.me/Asteroids" class="demo" data-link="wcvd.me/Asteroids">Demo</a>
+      <a href="http://github.com/wvandaal/ResuMe" class="github" data-link="github.com/wcvandaal/ResuMe">Source</a>
+      <p class="description">
+        A redesign of the classic arcade game, my implementation of Asteroids uses the HTML5 canvas element and pure JavaScript (with the revealing module pattern) to handle the in-game physics and object rendering. Asteroid frequency and HP scale relative to the player score to provide a realistic skill curve.
+      </p>
+    </section>
+
     <!-- Muse.cd -->
     <section class="project">
       <header>
         <strong>M<small>use.cd</small></strong>
         <span class="proj-date">April 2013</span>
       </header>
-      <a href="#" class="demo" data-link="#">Demo</a>
+      <!-- <a href="#" class="demo" data-link="#">Demo</a> -->
       <a href="http://github.com/wvandaal/muse" class="github" data-link="github.com/wcvandaal/muse">Source</a>
       <p class="description">
         Music discovery web application using Nokogiri and Feedzirra for HTML and RSS/Atom feed parsing to discover newly posted songs on music blogs. Features Facebook login with Devise and Omniauth, AJAX endless pagination, Jaccardian-similarity based recommendations implemented with Sidekiq and Redis.
@@ -82,6 +108,33 @@
   <section id="work">
     <header>E<small>xperience</small></header>
     
+    <!-- Trinity TA -->
+    <section>
+      <header>
+        <strong>T<small>rinity</small> C<small>ollege</small></strong>
+        <span>Hartford, CY</span>
+        <br>
+        <span class="date">September 2013 - December 2013</span>
+        <span class="position">Teaching Assistant</span>
+      </header>
+      <p class="description">
+        Led weekly instructional sessions in topics related to introductory web design, including best practices in HTML, CSS, and unobtrusive JavaScript. Consulted regularly with course professor regarding course objectives, in-class assignments and teaching methods.
+      </p>
+    </section>
+
+    <!-- NYSE -->
+    <section>
+      <header>
+        <strong>NYSE E<small>uronext</small></strong>
+        <span>New York, NY</span>
+        <br>
+        <span class="date">June 2011 - August 2011; May 2012 - August 2012</span>
+        <span class="position">Intern</span>
+      </header>
+      <p class="description">
+        Organized all major logistics for the execution and international live webcast of corporate speaking engagements featuring CEOs of Ford Motor Co. and Yum! Brands, resulting in 86% internal viewership (highest ever). Contributed to creating multi-year strategic partnerships with Bloomberg L.P., LinkedIn, and Discovery Communications.
+      </p>
+    </section>
 
   </section>
 
@@ -92,19 +145,23 @@
     <!-- Trinity -->
     <section class="degree" id="trinity">
       <header>
-        <strong>T<small>rinity</small> C<small>ollege</small>,</strong> <small>Class of 2014</small>
+        <strong>T<small>rinity</small> C<small>ollege</small></strong>
         <span>Hartford, CT</span>
+        <small class="enrollment">Class of 2014</small>
       </header>
-      <p>
-        B.S. Computer Science and Hispanic Studies. 2013 Computer Science Presidential Fellow. Winner of 2013 Travelers Companies Foundation Senior Research Prize for “Muse.cd.” Advanced coursework in Networks, Databases, Foundations of Programming Languages, and Web Design. Hispanic Studies senior thesis: <a id="thesis" href="thesis.pdf" data-link="wcvd.me/thesis.pdf">"Ojos de España, bocas de México: construyendo una cultura en exilio"</a>.
+      <p class="description">
+        B.S. Computer Science and Hispanic Studies. 2013 Computer Science Presidential Fellow. Awarded Faculty Honors fall 2009, spring 2011, spring 2012 - fall 2013. Winner of 2013 Travelers Companies Foundation Senior Research Prize for “Muse.cd.” Advanced coursework in Networks, Databases, Foundations of Programming Languages, and Web Design. Hispanic Studies senior thesis: <a id="thesis" href="thesis.pdf" data-link="wcvd.me/thesis.pdf">"Ojos de España, bocas de México: construyendo una cultura en exilio"</a>.
       </p>
     </section>
+
+    <!-- App Academy -->
     <section class="degree" id="app-academy">
       <header>
-        <strong>A<small>pp</small> A<small>cademy</small></strong>, <small>Summer 2013</small>
+        <strong>A<small>pp</small> A<small>cademy</small></strong>
         <span>New York, NY</span>
+        <small class="enrollment">Summer 2013</small>
       </header>
-      <p>
+      <p class="description">
         An intensive twelve-week full-stack web development program. Topics covered include Ruby on Rails, test-driven development with RSpec, HTTP, SQL, HTML5/CSS3, JavaScript, jQuery, AJAX, Backbone.js, unobtrusive design, and object-oriented design.
       </p>
     </section>

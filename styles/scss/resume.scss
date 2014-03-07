@@ -5,12 +5,14 @@
 $font: 'Libre Baskerville', serif;
 // $font: 'Varela Round', sans-serif;
 $screen-line-height: 2em;
-$print-line-height: 1.5em;
+$print-line-height: 1.25em;
+$screen-font-size: 16px;
+$print-font-size: 11px;
 
 
 
 html {
-  font-size: 16px;
+  font-size: $screen-font-size;
   @include outer-container();
   @include media(max-width 35em) {
     font-size: 12px;
@@ -41,7 +43,9 @@ body {
 
   // Major Sections
   > section {
-    margin-bottom: 2em;
+    @media screen {
+      margin-bottom: 2em;
+    }
   	> header {
       padding: 0.25em 0;
       font-size: 1.1em;  
@@ -64,8 +68,9 @@ body {
         small { text-transform: uppercase; }
       }
     }
-    p {
+    p.description {
       line-height: $screen-line-height;
+      margin-top: 0.25em;
     }
   }
 }
@@ -144,20 +149,52 @@ body {
         padding-left: 0.25em;
       }
     }
-    > p.description {
-      margin-top: 0.25em;
-    }
   }
 }
 
 
 #work {
-  display: none;
+
+  >section {
+    > header {
+
+
+      > span.position {
+        font-style: italic;
+        text-transform: none;
+        float: none;
+      }
+      > span.date {
+        text-transform: none;
+        float: right;
+        @include media(max-width 399px) {
+          display: block;
+          float: none;
+        }
+      }
+    }
+  }
 }
 
 // Education Section
 #education {
   > section {
+    > header {
+      > small.enrollment {
+        &:before {
+          content: ",  ";
+          position: relative;
+          left: -0.25em;
+          @include media(max-width 400px) {
+            display: none;
+          }
+        }
+        @include media(max-width 400px) {
+          display: block;
+          float: none;
+        }
+      }
+    }
     p {
       margin-top: 0.2em;
     }
@@ -189,7 +226,7 @@ body {
     size: auto;
   }
   html {
-    font-size: 12px;
+    font-size: $print-font-size;
   }
   body {
     margin: 0;
@@ -198,7 +235,7 @@ body {
       > header {
         margin: 0;
       }
-      p {
+      p.description {
         line-height: $print-line-height;
       }
     }
@@ -211,9 +248,7 @@ body {
   #title {
     margin-top: 0;
   }
-
   #projects {
-    margin-bottom: 0.5em;
     > section.project {
       > a {
         &:after {
