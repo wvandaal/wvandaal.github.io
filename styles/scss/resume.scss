@@ -5,6 +5,7 @@
 $font: 'Libre Baskerville', serif;
 // $font: 'Varela Round', sans-serif;
 $screen-line-height: 2em;
+$bullet-line-height: 1.5em;
 $print-line-height: 1.25em;
 $screen-font-size: 16px;
 $print-font-size: 11px;
@@ -71,6 +72,12 @@ body {
     p.description {
       line-height: $screen-line-height;
       margin-top: 0.25em;
+    }
+    ul.description {
+      padding-left: 1em;
+      > li {
+        line-height: $bullet-line-height;
+      }
     }
   }
 }
@@ -150,7 +157,12 @@ body {
       }
     }
   }
+  #muse, #resume {
+    display: none;
+  }
 }
+
+
 
 
 #work {
@@ -196,6 +208,9 @@ body {
       margin-top: 0.2em;
     }
   }
+  #app-academy {
+    display: none;
+  }
 }
 
 #skills-list {
@@ -233,6 +248,9 @@ body {
         margin: 0;
       }
       p.description {
+        line-height: $print-line-height;
+      }
+      ul.description > li {
         line-height: $print-line-height;
       }
     }

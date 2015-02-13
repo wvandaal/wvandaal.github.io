@@ -90,8 +90,8 @@
     </section>
 
     <!-- ResuMe -->
-    <!--
-    <section class="project">
+    
+    <section class="project" id="resume">
       <header>
         <strong>R<small>esu</small>M<small>e</small></strong>
         <span class="proj-date">August 2013</span>
@@ -102,7 +102,7 @@
         Customizable online resume for small groups of people (C-suite, startup founders, etc.) built with Rails. Implements AJAX for all content creation and editing with fully unobtrusive JavaScript. Page-specific JS uses Garber-Irish implementation to allow for graceful degradation of JS. 
       </p>
     </section>
-    -->
+    
 
     <!-- Asteroids -->
     <section class="project">
@@ -113,12 +113,12 @@
       <a href="http://wcvd.me/Asteroids" class="demo" data-link="wcvd.me/Asteroids">Demo</a>
       <a href="http://github.com/wvandaal/Asteroids" class="github" data-link="github.com/wcvandaal/Asteroids">Source</a>
       <p class="description">
-        A redesign of the classic arcade game, my implementation of Asteroids uses the HTML5 canvas element and pure JavaScript (with the revealing module pattern) to handle the in-game physics and object rendering. Asteroid frequency and HP scale relative to the player score to provide a realistic skill curve.
+        A redesign of the classic arcade game, my implementation of Asteroids uses the HTML5 canvas element and vanilla JavaScript to handle the in-game physics and object rendering. Asteroid frequency and HP scale relative to the player score to provide a realistic skill curve.
       </p>
     </section>
 
     <!-- Muse.cd -->
-    <section class="project">
+    <section class="project" id="muse">
       <header>
         <strong>M<small>use.cd</small></strong>
         <span class="proj-date">April 2013</span>
@@ -135,6 +135,19 @@
   <!-- Work Experience -->
   <section id="work">
     <header>E<small>xperience</small></header>
+
+    <section>
+      <header>
+        <strong>L<small>earn</small>V<small>est, inc.</small></strong>
+        <span>Hartford, CT</span>
+        <br>
+        <span class="date">June 2014 - Present</span>
+        <span class="position">Software Engineer</span>
+      </header>
+      <p class="description">
+          Proposed and implemented website performance optimization workflow, reducing load times by ~65% and payload size by ~50% on targeted pages. Designed flexible event aggregator plugin for Optimizely to prevent FOUC, reduce unnecessary CSS reflows, and facilitate bidirectional communication between Backbone SPAs and Optimizely, enabling A/B testing of dynamic content and improving load times and site UX while reducing payload size and number of HTTP requests. Prototyped and constructed new signup application for corporate clients using Backbone.js and Marionette with support for Backbone A/B testing, flexible form fields with custom validation, and an inter-module message passing system. Spearheaded project-wide code refactor, removing 16,000+ unnecessary lines of code and reducing total repository size by ~20%. Designed and introduced image optimization workflow with mobile-first design methodology for graphics team, reducing image sizes by ~60-80%. Designed and launched first company-wide education program for teaching web technologies and concepts to QA staff, expediting testing workflow and reducing developer involvement in quality assurance. Led technical talks on the topics of web components, (functional) reactive programming, service-oriented architecture, functional programming, and website performance.
+      </p>
+    </section>
     
     <!-- Trinity TA -->
     <section>
@@ -198,11 +211,13 @@
   <section id="skills">
     <header>T<small>echnical</small> S<small>kills</small></header>
     <ul id="skills-list">
-      <li>Ruby, Ruby on Rails<!-- , RSpec TDD --></li>
-      <li>JavaScript, jQuery, Polymer.js, Backbone.js</li>
-      <li>HTML/5, CSS/3, Sass, Responsive Design, Web Components</li>
+      <li>JavaScript, jQuery, Backbone.js & Backbone.Marionette</li>
+      <li>HTML/5, CSS/3, Sass, Responsive Design</li>
+      <li>Test-Driven Development: Jasmine, Karma, Istanbul</li>
       <li>SQL [MySQL, SQLite, PostgreSQL]</li>
+      <li>Server-Side: Node.js, Express, Jade/Handlebars, Grunt, Gulp, Require.js, Browserify</li>
       <li>VCS: Git, GitHub</li>
+      <li>Ruby, Ruby on Rails<!-- , RSpec TDD --></li>
     </ul>
   </section>
 </body>
